@@ -6,3 +6,14 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 .no-js-note{text-align:center;padding:25px;font-size:12px}
+
+/* Match the founder logo; stack the identity where horizontal space is limited. */
+.footer-top>.footer-identity{flex-direction:row;align-items:center;gap:22px;min-width:0}
+.footer-logo-link{display:block;width:100px;height:95px;flex-shrink:0;border-radius:8px}
+.footer-logo{width:100px;height:95px;object-fit:contain;transition:transform .35s ease}
+@media(hover:hover) and (pointer:fine){.footer-logo-link:hover .footer-logo{transform:rotate(-5deg) scale(1.05)}}
+.footer-logo-link:focus-visible .footer-logo{transform:rotate(-5deg) scale(1.05)}
+.footer-logo-link:active .footer-logo{transform:scale(.97)}
+@media(max-width:1000px){.footer-top>.footer-identity{flex-direction:column;align-items:flex-start;gap:20px}}
+@media(max-width:700px){.footer-top>.footer-identity{grid-column:1/-1;gap:18px}}
+@media(prefers-reduced-motion:reduce){.footer-logo-link .footer-logo{transform:none!important;transition:none}}
